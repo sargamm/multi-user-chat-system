@@ -37,7 +37,7 @@ int main(){
         exit(1);
     }
     remote.sun_family=AF_UNIX;
-    strcpy(remote.sun_path,"/home/sargam/CAOS/MultiUserChatSystem/socketfile");
+    strcpy(remote.sun_path,"socketfile");
     int length=strlen(remote.sun_path)+sizeof(remote.sun_family);
     if(connect(Socket,(struct sockaddr *)&remote,length)==-1)
     {
