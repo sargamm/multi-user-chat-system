@@ -59,7 +59,7 @@ int main(){
     }
     struct sockaddr_un local,remote;
     local.sun_family=AF_UNIX;
-    strcpy(local.sun_path,"/home/sargam/CAOS/MultiUserChatSystem/socketfile");
+    strcpy(local.sun_path,"socketfile");
     unlink(local.sun_path);
     int length=strlen(local.sun_path)+sizeof(local.sun_family);
     int x=bind(socketDescriptor,(struct sockaddr *) &local, sizeof(local));
